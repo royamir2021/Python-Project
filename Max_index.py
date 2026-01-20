@@ -5,4 +5,7 @@ def find_max_index(nums):
     if not nums:
         raise ValueError("The input list cannot be None or empty.")
     max_index=0
-    for 
+    for i in range(1,len(nums)):
+        if nums[i]>nums[max_index]:
+            max_index=i
+    return max_index
