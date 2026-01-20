@@ -1,0 +1,8 @@
+# Problem Statement
+# You are given a list of integers.
+# Return the index of the first occurrence of the maximum value.
+def find_max_index(nums):
+    if not nums:
+        raise ValueError("The input list cannot be None or empty.")
+    max_index=0
+    for 
