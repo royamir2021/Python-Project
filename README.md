@@ -18,3 +18,5 @@
 <h3>Review Criteria</h3>
 <be>
 <p>You will complete two hands-on labs on Extracting Stock Data and one assignment. Your performance will be evaluated based on two quizzes and one peer review assignment. The quizzes will test your understanding of the labs' output, and in the peer review assignment, you will share and take screenshots of your assignment outcomes.<p>
+
+# test commit
