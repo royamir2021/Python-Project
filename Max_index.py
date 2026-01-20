@@ -9,3 +9,6 @@ def find_max_index(nums):
         if nums[i]>nums[max_index]:
             max_index=i
     return max_index
+
+nums=[1,5,8,9,1,5]
+print(find_max_index(nums))
