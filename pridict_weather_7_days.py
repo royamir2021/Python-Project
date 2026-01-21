@@ -6,9 +6,10 @@ import os
 
 # 1. Get weather data
 today = datetime.now()
-week_ago = today - timedelta(days=7)
-start_date = week_ago.strftime("%Y-%m-%d")
-end_date = today.strftime("%Y-%m-%d")
+week_next = today + timedelta(days=7)
+start_date = today.strftime("%Y-%m-%d")
+end_date = week_next.strftime("%Y-%m-%d")
+# print(timedelta(days=7))
 
 params = {
     "latitude": 43.65107,
@@ -40,7 +41,7 @@ plt.plot(df['date'], df['avg_temp'], 'g--', label='Average')
 
 plt.xlabel('Date')
 plt.ylabel('Temperature (°C)')
-plt.title('Toronto_weatherr - Past Week')
+plt.title('Toronto_weatherr - Next Week')
 plt.legend()
 plt.grid(True, alpha=0.3)
 plt.xticks(rotation=45)
@@ -52,8 +53,8 @@ if not os.path.exists('data'):
     
     
 timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M")
-plt.savefig("data/Toronto_weather_{timestamp}.png")
-df.to_csv('data/Toronto_weather_{timestamp}.csv', index=False)
+plt.savefig("data/Toronto_weather_" + timestamp + ".png")
+df.to_csv("data/Toronto_weather_" + timestamp + ".csv", index=False)
 
 print(f"Average temperature: {df['avg_temp'].mean():.1f}°C")
 print("Files saved in 'data' folder")
