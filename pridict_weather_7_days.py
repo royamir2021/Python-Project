@@ -49,9 +49,11 @@ plt.tight_layout()
 # 5. Save everything
 if not os.path.exists('data'):
     os.makedirs('data')
-
-plt.savefig('data/weather_chart.png')
-df.to_csv('data/،Toronto_weather.csv', index=False)
+    
+    
+timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M")
+plt.savefig("data/Toronto_weather_{timestamp}.png")
+df.to_csv('data/Toronto_weather_{timestamp}.csv', index=False)
 
 print(f"Average temperature: {df['avg_temp'].mean():.1f}°C")
 print("Files saved in 'data' folder")
